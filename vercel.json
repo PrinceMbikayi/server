@@ -2,14 +2,28 @@
   "version": 2,
   "builds": [
     {
-      "src": "./server.js",
+      "src": "server.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "server.js"
     }
-  ]
+  ],
+  "env": {
+    "PORT": "5001",
+    "MONGO_URI": "mongodb+srv://prince:IMbest01@servermobile.hrxof.mongodb.net/?retryWrites=true",
+    "JWT_SECRET": "ton_secret_jwt",
+    "CLOUDINARY_NAME": "neutrogena-best",
+    "CLOUDINARY_API_KEY": "314379254499111",
+    "CLOUDINARY_API_SECRET": "Dz9pQLUJC-BRdczcAET8cWKjzIA",
+    "SMTP_HOST": "smtp.mailtrap.io",
+    "SMTP_PORT": "2525",
+    "SMTP_USER": "399ee01eeffa2c",
+    "SMTP_PASS": "********e65c",
+    "STRIPE_API_KEY": "pk_test_51PLbOjRx1MID7VUPEYdxUvLTSBWMjTjoIfG8pEU6FP93a2Os19t7DAAtYcp3E0KKLYspyqhZUzNdwYQeHoOtojwO00e56rZMMj",
+    "STRIPE_API_SECRET": "sk_test_51PLbOjRx1MID7VUPOUcLzRuYtxUOZTh3rHtF13fgTyKD0v7q4y8Q7LCAyQ7xmNFfSyAAf7dxmyx6hSqnkkhV1VA000zsdJkOP0"
+  }
 }

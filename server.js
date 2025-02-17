@@ -13,9 +13,5 @@ cloudinary.v2.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-const port = process.env.PORT || 5001;
-app.listen(port, () => {
-  console.log(
-    `Server listening on port: ${port}, in ${process.env.NODE_ENV} MODE.`
-  );
-});
+// Vercel nécessite un handler pour gérer les requêtes
+export default app;
